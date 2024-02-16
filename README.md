@@ -15,7 +15,7 @@ To get this service running, you'll need to deploy it to AWS Lambda. Here are th
 1. **Clone the repository:**
 
 ```bash
-git clone git clone https://github.com/FindMyPetOrg/findmypet-image-recognition.git
+git clone https://github.com/FindMyPetOrg/findmypet-image-recognition.git
 cd findmypet-image-recognition
 ```
 
