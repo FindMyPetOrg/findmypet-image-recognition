@@ -1,0 +1,20 @@
+service: lambdaClassificationService
+provider:
+  name: aws
+  runtime: python3.9
+  timeout: 30
+plugins:
+  - serverless-offline
+custom:
+  serverless-offline:
+    useChildProcesses: true
+functions:
+  optimize:
+    name: LambdaClassificationService
+    handler: main.handler
+    timeout: 30
+    events:
+      - http:
+          path: /predict
+          method: POST
+          cors: true
