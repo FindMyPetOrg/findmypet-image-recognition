@@ -2,17 +2,18 @@ service: lambdaClassificationService
 provider:
   name: aws
   runtime: python3.9
-  timeout: 30
+  timeout: 1
 plugins:
   - serverless-offline
 custom:
   serverless-offline:
     useChildProcesses: true
+    httpPort: 4000
 functions:
   optimize:
     name: LambdaClassificationService
     handler: main.handler
-    timeout: 30
+    timeout: 60
     events:
       - http:
           path: /predict
